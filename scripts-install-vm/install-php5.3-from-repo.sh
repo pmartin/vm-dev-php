@@ -23,6 +23,8 @@ sed -i -e 's/^display_errors = Off$/display_errors = On/' /etc/php5/apache2/php.
 sed -i -e 's/^track_errors = Off$/track_errors = On/' /etc/php5/apache2/php.ini
 sed -i -e 's/^html_errors = Off$/html_errors = On/' /etc/php5/apache2/php.ini
 sed -i -e 's/^upload_max_filesize = 2M$/upload_max_filesize = 5M/' /etc/php5/apache2/php.ini
+sed -i -e 's/^session.gc_maxlifetime = 1440$/session.gc_maxlifetime = 14400/' /etc/php5/apache2/php.ini
+
 
 # Même chose, dans la conf CLI
 sed -i -e 's/^short_open_tag = On$/short_open_tag = Off/' /etc/php5/cli/php.ini
@@ -34,6 +36,7 @@ sed -i -e 's/^display_errors = Off$/display_errors = On/' /etc/php5/cli/php.ini
 sed -i -e 's/^track_errors = Off$/track_errors = On/' /etc/php5/cli/php.ini
 sed -i -e 's/^html_errors = Off$/html_errors = On/' /etc/php5/cli/php.ini
 sed -i -e 's/^upload_max_filesize = 2M$/upload_max_filesize = 5M/' /etc/php5/cli/php.ini
+sed -i -e 's/^session.gc_maxlifetime = 1440$/session.gc_maxlifetime = 14400/' /etc/php5/cli/php.ini
 
 
 cat >> /etc/php5/conf.d/xdebug.ini <<EOF
