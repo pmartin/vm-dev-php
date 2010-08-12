@@ -2,7 +2,7 @@
 
 aptitude -y install subversion subversion-tools
 
-# On passera par Apache = WebDAV pour accèder à SVN
+# On passera par Apache = WebDAV pour accÃ¨der Ã  SVN
 aptitude -y install apache2-mpm-prefork apache2 libapache2-svn
 
 aptitude clean
@@ -62,7 +62,7 @@ EOF
 
 
 echo "Repository URL : https://svn.myserver/test-repository/"
-echo "Accès :"
+echo "AccÃ¨s :"
 echo "  user1 / password1 (read-write)"
 echo "  user2 / password2 (read-write)"
 echo "  anonymous / anonymous (read)"

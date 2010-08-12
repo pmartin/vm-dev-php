@@ -1,7 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 
-# Pour que le mot de passe 'root' MySQL ne soit pas demandé
-# Mais pris depuis ce qui est configuré ici :
+# Pour que le mot de passe 'root' MySQL ne soit pas demandÃ©
+# Mais pris depuis ce qui est configurÃ© ici :
 echo mysql-server mysql-server/root_password select root | debconf-set-selections
 echo mysql-server mysql-server/root_password_again select root | debconf-set-selections
 

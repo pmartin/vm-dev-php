@@ -4,16 +4,16 @@ aptitude -y install php5 php5-cli php5-curl php5-dev php5-gd php5-geoip php5-ima
 
 aptitude clean
 
-# Commentaires à l'ancienne mode, déprécié => correction, pour éviter des messages d'erreur
+# Commentaires Ã  l'ancienne mode, dÃ©prÃ©ciÃ© => correction, pour Ã©viter des messages d'erreur
 sed -i -e 's/^# /; /' /etc/php5/cli/conf.d/imagick.ini
 sed -i -e 's/^# /; /' /etc/php5/cli/conf.d/imap.ini
 sed -i -e 's/^# /; /' /etc/php5/cli/conf.d/mcrypt.ini
 
-# Timezone par défaut :
+# Timezone par dÃ©faut :
 sed -i -e 's/^;date.timezone =$/date.timezone = Europe\/Paris/' /etc/php5/apache2/php.ini
 sed -i -e 's/^;date.timezone =$/date.timezone = Europe\/Paris/' /etc/php5/cli/php.ini
 
-# Quelques paramètres de conf qui ne me conviennent pas, pour une machine de développement / test
+# Quelques paramÃ¨tres de conf qui ne me conviennent pas, pour une machine de dÃ©veloppement / test
 sed -i -e 's/^short_open_tag = On$/short_open_tag = Off/' /etc/php5/apache2/php.ini
 sed -i -e 's/^;realpath_cache_size = 16k$/realpath_cache_size = 16k/' /etc/php5/apache2/php.ini
 sed -i -e 's/^;realpath_cache_ttl = 120$/realpath_cache_ttl = 120/' /etc/php5/apache2/php.ini
@@ -24,7 +24,7 @@ sed -i -e 's/^track_errors = Off$/track_errors = On/' /etc/php5/apache2/php.ini
 sed -i -e 's/^html_errors = Off$/html_errors = On/' /etc/php5/apache2/php.ini
 sed -i -e 's/^upload_max_filesize = 2M$/upload_max_filesize = 5M/' /etc/php5/apache2/php.ini
 
-# Même chose, dans la conf CLI
+# MÃªme chose, dans la conf CLI
 sed -i -e 's/^short_open_tag = On$/short_open_tag = Off/' /etc/php5/cli/php.ini
 sed -i -e 's/^;realpath_cache_size = 16k$/realpath_cache_size = 16k/' /etc/php5/cli/php.ini
 sed -i -e 's/^;realpath_cache_ttl = 120$/realpath_cache_ttl = 120/' /etc/php5/cli/php.ini

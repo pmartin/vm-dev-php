@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 aptitude -y install memcached
 aptitude -y install couchdb

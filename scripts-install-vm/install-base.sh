@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 cat >> /etc/samba/smb.conf <<EOF
 [home-user]
@@ -8,7 +8,7 @@ cat >> /etc/samba/smb.conf <<EOF
     guest ok = yes
     writable = yes
     public = yes
-    create mode = 0775		# Un peu beaucoup permissif, mais pour développer, ça simplifiera des choses
+    create mode = 0775		# Un peu beaucoup permissif, mais pour dÃ©velopper, Ã§a simplifiera des choses
     force user = user
     force group = user
 EOF
@@ -19,13 +19,13 @@ sed -i -e 's/^PermitRootLogin yes$/PermitRootLogin no/' /etc/ssh/sshd_config
 sed -i -e 's/^#Banner \/etc\/issue.net$/Banner \/etc\/issue.net/' /etc/ssh/sshd_config
 /etc/init.d/ssh restart
 
-# Message qui sera affiché avant le login
-# (Si on utilise putty comme client, sera affiché seulement après la saisie du login ; depuis un client sous Linux, sera affiché avant la saisie du login)
+# Message qui sera affichÃ© avant le login
+# (Si on utilise putty comme client, sera affichÃ© seulement aprÃ¨s la saisie du login ; depuis un client sous Linux, sera affichÃ© avant la saisie du login)
 cat > /etc/issue.net <<EOF
 Bienvenue sur votre VM de dev.
 Pour toute question, contacter Pascal MARTIN
 
-Login / password par défaut : user / password
+Login / password par dÃ©faut : user / password
 EOF
 
 sed -i -e 's/^#force_color_prompt=yes$/force_color_prompt=yes/' /home/user/.bashrc
@@ -41,19 +41,19 @@ cat > /usr/local/bin/get-ip-address <<EOF
 EOF
 chmod +x /usr/local/bin/get-ip-address
 
-# Fichier d'issue "par défaut"
+# Fichier d'issue "par dÃ©faut"
 cat > /etc/issue-standard <<EOF
 Bienvenue sur votre VM de dev.
 Pour toute question, contacter Pascal MARTIN
 
-Login / password par défaut : user / password
+Login / password par dÃ©faut : user / password
 EOF
 
 
-# Script qui sera lancé automatiquement lorsqu'une interface est activée
-# => Peut re-définir l'issue affichée quand on demande un login, en mettant dedans l'IP courante
+# Script qui sera lancÃ© automatiquement lorsqu'une interface est activÃ©e
+# => Peut re-dÃ©finir l'issue affichÃ©e quand on demande un login, en mettant dedans l'IP courante
 cat > /etc/network/if-up.d/override-issue-with-IP <<EOF
-#!/bin/sh
+#!/bin/bash
 if [ "\$METHOD" = loopback ]; then
     exit 0
 fi
