@@ -28,6 +28,7 @@
 Au choix, utilisation de [VMWare](http://www.vmware.com/products/player/) ou [VirtualBox](http://www.virtualbox.org/).
 
 Quelques points à noter :
+
 * CPU : moins que sur votre machine physique
 ** Sur une machine physique dual-core => machine virtuelle mono-core
 ** Sur une machine physique quad-code => machine virtuelle dual-core
