@@ -42,13 +42,13 @@ Quelques points à noter :
 
 Je ne détaille pas le processus d'installation *(en gros, c'est "suivant, suivant, suivant" -- prenez juste le temps de lire les écrans, pour mettre les bonnes réponses)*, mais voici quelques notes à propos de points spécifiques, ou correspondant à mes préférences d'installation pour ce type de machine :
 
-* Nom de machine : j'utilise généralement quelque chose du genre @@devhost@@
+* Nom de machine : j'utilise généralement quelque chose du genre `devhost`
 * Disques : pour éviter d'avoir à trop réfléchir, et des tailles de partitions qui ne vont pas *(du style partition système trop grosse, partition utilisateur trop petite)*, je fais généralement une seule partition "données", plus une petite partition "swap" ; ce qui signifie :
   * Méthode de partitionnement : assisté - utiliser un disque entier
 * Utilisateur : considérant que les VM de développement que je crée sont souvent utilisées par plusieurs personnes, et/ou pour plusieurs projets, je n'indique jamais de "vrai" nom ; en général, je pars sur :
-  * Nom complet : @@Anon YMOUS@@
-  * Identifiant : @@user@@
-  * Mot de passe : @@password@@
+  * Nom complet : `Anon YMOUS`
+  * Identifiant : `user`
+  * Mot de passe : `password`
 * Proxy HTTP pour l'outil de gestion de paquet : si vous en avez un sur votre réseau, indiquez le, vous y gagnerez sur les temps de téléchargement *(si vous ne comprenez pas la question, c'est que vous n'en n'avez pas, et laissez le champ vide)*
 * Sélection des logiciels : en général, je n'installe que peu de paquet ici *(et installerai le reste manuellement plus tard)* -- je sélectionne généralement :
   * OpenSSH Server
