@@ -106,7 +106,7 @@ Pour installer Apache + PHP et intégrer PHP à Apache, vous lancerer le script 
 Lui-même fera appel à deux sous-scripts, chacun chargés d'installer + configurer un des composants :
 
 * Installation et configuration d'Apache : `zz-install-apache.sh`
-* Installation et configuration de PHP + extensions : zz-install-php5.3.sh`
+* Installation et configuration de PHP + extensions : `zz-install-php5.3.sh`
 
 
 # MySQL : install-mysql.sh ##
