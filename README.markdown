@@ -54,7 +54,12 @@ Je ne détaille pas le processus d'installation *(en gros, c'est "suivant, suiva
   * OpenSSH Server
   * Samba file server
 
+Une fois la machine rebootée, vous pouvez vous connecter avec le compte `user / password` créé lors de l'installation.
 
+
+Pour connaitre l'adresse IP de la machine *(et vous y connecter ensuite en SSH, via un client qui support le copier-coller, ce qui facilitera notamment les lancements de commandes)*, utilisez la commande suivante :
+
+    ifconfig
 
 
 
