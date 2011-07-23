@@ -11,12 +11,16 @@
 # Principe #
 
 * Installation de [Ubuntu Server](http://www.ubuntu.com/download/server/download) -- *11.04 - Natty Narwhal au moment où j'écris ceci*
+
 ** Système de base, avec peu de paquets
+
 * Installation manuelle d'une sélection de paquets fournis par la distribution
+
 ** Apache
 ** PHP
 ** MySQL
 ** Quelques outils de développement
+
 * Installation d'outils de développement supplémentaires, éventuellement non fournis par la distribution
 * Configuration
 
@@ -30,9 +34,12 @@ Au choix, utilisation de [VMWare](http://www.vmware.com/products/player/) ou [Vi
 Quelques points à noter :
 
 * CPU : moins que sur votre machine physique
+
 ** Sur une machine physique dual-core => machine virtuelle mono-core
 ** Sur une machine physique quad-code => machine virtuelle dual-core
+
 * RAM : veiller à en garder assez pour la machine physique
+
 ** Machine physique à 2 GB de RAM => ça va pas être évident...
 ** Machine physique à 3 GB de RAM *(Ou 4 GB mais Windows 32 bits)* => Entre 700 MB et 1 GB de RAM pour la VM
 ** Machine physique à 4 GB de RAM ou plus => 1 GB de RAM pour la VM ; plus si lancement de grosses applications bien gourmandes.
