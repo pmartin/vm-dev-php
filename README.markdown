@@ -161,6 +161,18 @@ Ce script va :
 Notez que pour pouvoir lancer ce script, vous allez devoir l'éditer pour supprimer l'instruction `exit` présente au début *(pour éviter qu'il ne soit lancé par quelqu'un n'ayant pas lu cette documentation, considérant qu'un serveur SVN n'est généralement pas quelque chose qui a besoin d'être installé sur une VM de développement)*.
 
 
+## Installation de Dotclear : ext-install-dotclear.sh ##
+
+Bien entendu, il est fort peu probable que vous ayez besoin d'installer Dotclear *(plate-forme de blogging)* sur votre serveur de développement... Mais ce script a pour objectif de montrer les différentes étapes que aurez à reproduire pour installer à peu près n'importe quelle application sur laquelle vous aurez à travailler :
+
+* Récupération des sources
+* Affectation des droits d'écriture à Apache pour certains répertoires / fichiers
+* Création d'une base de données MySQL et de son utilisateur
+* Création d'un VirtualHost Apache à partir duquel votre application sera servie.
+
+Certains points seront très certainement à adapter lorsque vous aurez besoin de déployer sur votre serveur de développement l'application sur laquelle vous travaillez, mais les grandes lignes devraient être assez similaires : après tout, vous allez travailler au développement d'une application PHP en environnement LAMP, n'est-ce pas ?
+
+
 
 
 
