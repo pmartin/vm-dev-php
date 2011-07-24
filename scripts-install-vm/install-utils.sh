@@ -12,6 +12,6 @@ sudo apt-get -y install git-svn git-core
 #sudo apt-get -y install ant
 
 # Outils réseau, téléchargement, ...
-sudo apt-get -y install nmap whois lynx wget curl
+sudo apt-get -y install nmap whois lynx wget curl siege
 
 sudo apt-get clean
