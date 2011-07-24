@@ -75,6 +75,7 @@ Pour cela, vous avez une liste de shell-scripts, installant chacun une série d'
 C'est le premier script à lancer, et vous voudrez probablement systématiquement l'exécuter.
 
 Actions principales :
+
 * Partage via samba de l'ensemble du répertoire de votre utilisateur *(pourra être monté en tant que lecteur réseau sous windows)*.
 * Affichage de l'adresse IP + login/password dès le lancement de la machine virtuelle.
 * Quelques améliorations mineures de configuration.
@@ -83,6 +84,7 @@ Actions principales :
 ## Utilitaires, SCM : install-utils.sh ##
 
 Ce script installe quelques logiciels *utilitaires*, dont accès à des système de [SCM](http://en.wikipedia.org/wiki/Source_Code_Management) :
+
 * Accès à des gestionnaires de contrôle de source : SVN, Git, ... *(vous voudrez peut-être commenter ou décommenter quelques lignes, en fonction de vos besoins)*
 * Quelques outils "système"
 * Quelques outils réseau / internet
@@ -109,15 +111,37 @@ Lui-même fera appel à deux sous-scripts, chacun chargés d'installer + configu
 * Installation et configuration de PHP + extensions : `zz-install-php5.3.sh`
 
 
-# MySQL : install-mysql.sh ##
+## MySQL : install-mysql.sh ##
 
 Ce script va :
+
 * Installer le serveur MySQL
   * Le configurer pour autoriser les connexions distantes *(pour que vous puissiez utiliser un client lourd sur votre machine physique, par exemple)*
   * Initialiser le compte administrateur avec les informations de connexion suivantes : `root / root`
 * Installer les outils clients en ligne de commande
 
 
+# Autres installations "optionnelles" #
+
+En plus des scripts d'installation d'une plate-forme LAMP de développement, vus ci-dessus, voici quelques scripts qui installent d'autres outils.
+<br>De manière générale, il est probable que vous ne souhaitiez-pas installer ceux-ci, et, donc, que vous n'exécuterez pas ces scripts ; mais, en fonction de vos besoins...
+
+*Exemple typique : vous n'avez pas besoin d'un serveur SVN sur votre machine virtuelle de développement '(si vous avez besoin d'un serveur SVN, mettez le en place sur une vraie plate-forme, avec sauvegardes !)'. Mais si vous voulez former quelqu'un à l'utilisation de SVN, un serveur "poubelle", pour tester, peut être pratique...*
+
+
+## Serveur SVN : ext-install-server-subversion.sh ##
+
+Ce script va :
+
+* Installer un serveur Apache *(si pas déjà présent)*
+  * Avec modules WebDAV, notamment
+  * Et configurer un VirtualHost en SSL
+* Initialiser un serveur SVN, qui sera servi en WebDAV par Apache
+  * Le serveur SVN sera donc accessible en HTTPS
+* Créer un repository de test
+  * Avec quelques utilisateurs en lecture-seule, ou lecture-écriture
+
+Notez que pour pouvoir lancer ce script, vous allez devoir l'éditer pour supprimer l'instruction `exit` présente au début *(pour éviter qu'il ne soit lancé par quelqu'un n'ayant pas lu cette documentation, considérant qu'un serveur SVN n'est généralement pas quelque chose qui a besoin d'être installé sur une VM de développement)*.
 
 
 
