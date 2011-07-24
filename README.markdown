@@ -70,6 +70,23 @@ Pour cela, vous avez une liste de shell-scripts, installant chacun une série d'
 <br>Voici quelques notes sur certains d'entre eux - dans l'ordre où vous aurez tendance à les lancer.
 
 
+## Comment exécuter ces scripts ? ##
+
+Exécuter ces scripts passe par deux étapes :
+
+* Les déposer dans la machine virtuelle *(en scp, en utilisant [WinSCP](http://winscp.net/eng/docs/lang:fr) par exemple, si vous êtes sous Windows)*
+* Lancer ceux qui vous intéressent.
+
+Pour lancer un script, connectez-vous en SSH *(via [Putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/) par exemple, si vous êtes sous Windows)*, et lancez :
+
+    sh repertoire-des-scripts/nom-du-script.sh
+    
+Par exemple, pour lancer le premier script *(cf ci-dessous)* :
+
+    sh ~/scripts-install-vm/install-base.sh
+
+
+
 ## Outils / configuration de base : install-base.sh  ##
 
 C'est le premier script à lancer, et vous voudrez probablement systématiquement l'exécuter.
