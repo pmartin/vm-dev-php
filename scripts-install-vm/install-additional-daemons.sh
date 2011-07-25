@@ -1,7 +1,7 @@
 #!/bin/bash
 
-aptitude -y install memcached
-aptitude -y install couchdb
-aptitude -y install gearman
+sudo apt-get -y install memcached
+#sudo apt-get -y install couchdb
+sudo apt-get -y install gearman
 
-aptitude clean
+sudo apt-get clean
