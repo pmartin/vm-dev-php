@@ -184,6 +184,16 @@ sudo pear install --alldeps phpunit/PHPUnit
 sudo pear channel-discover pear.phing.info
 sudo pear install --alldeps phing/phing
 
+# Autres outils "QA"
+sudo pear channel-discover pear.pdepend.org
+sudo pear channel-discover pear.phpmd.org
+sudo pear install pdepend/PHP_Depend
+sudo pear install phpmd/PHP_PMD
+sudo pear install phpunit/phpcpd
+sudo pear install phpunit/File_Iterator
+sudo pear install phpunit/phploc
+sudo pear install --alldeps phpunit/PHP_CodeBrowser
+
 # DocBlox (en alternative plus récente (et compatible PHP 5.3) à PhpDocumentor)
 sudo pear channel-discover pear.docblox-project.org
 sudo pear install --alldeps docblox/DocBlox
