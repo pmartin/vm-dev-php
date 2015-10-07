@@ -40,7 +40,7 @@ Quelques points à noter :
 
 ## Installation Ubuntu Server ##
 
-Je ne détaille pas le processus d'installation *(en gros, c'est "suivant, suivant, suivant" -- prenez juste le temps de lire les écrans, pour mettre les bonnes réponses)*, mais voici quelques notes à propos de points spécifiques, ou correspondant à mes préférences d'installation pour ce type de machine :
+Je ne détaille pas le processus d'installation *(en gros, c'est "suivant, suivant, suivant" -- prenez juste le temps de lire les écrans, pour mettre les bonnes réponses)*, mais voici quelques notes à propos de points spécifiques, ou correspondent à mes préférences d'installation pour ce type de machine :
 
 * Nom de machine : j'utilise généralement quelque chose du genre `devhost`
 * Disques : pour éviter d'avoir à trop réfléchir, et des tailles de partitions qui ne vont pas *(du style partition système trop grosse, partition utilisateur trop petite)*, je fais généralement une seule partition "données", plus une petite partition "swap" ; ce qui signifie :
